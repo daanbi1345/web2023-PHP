@@ -9,6 +9,7 @@
 
     --bg__gray: #eee;
     --bg__black: #000;
+    --bg__white: #fff;
 }
 
 @media (max-width: 800px){
