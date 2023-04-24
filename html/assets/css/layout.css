@@ -1,6 +1,7 @@
 /* 
     +header
     +nav
+    +footer
 */
 
 /* header__inner */
@@ -97,6 +98,16 @@
 .nav__inner li a:hover {
     background-color: var(--color__black);
     color: var(--color__white);
+}
+
+/* footer__inner */
+.footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+    font-size: 14px;
+    color: #666;
 }
 
 /* media */

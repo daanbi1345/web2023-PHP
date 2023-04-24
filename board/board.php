@@ -1,10 +1,6 @@
 <?php
     include "../connect/connect.php";
     include "../connect/session.php";
-
-    echo "<pre>";
-    var_dump($_SESSION);
-    echo "</pre>";
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP 블로그 만들기</title>
+    <title>게시판</title>
 
     <?php include "../include/head.php" ?>
     <!-- head -->
@@ -36,13 +32,10 @@
                 당신은 원하는 것을 상상하고 상상하는 것을 행동에 옮길 것이며, 종국에는 행동에 옮길 것을 창조하게 된다.
             </p>
         </div>
-        <!-- intro__inner -->
-
     </main>
-    <!-- //main -->
+    <!-- main -->
 
     <?php include "../include/footer.php" ?>
     <!-- footer -->
-    
 </body>
 </html>

@@ -16,12 +16,17 @@
     left: 0;
 }
 
-/* bg */
+/* color style */
 .gray {
     background-color: var(--bg__gray);
 }
+.white {
+    background-color: var(--color__white) !important;
+    color: var(--color__black) !important;
+}
 .black {
-    background-color: var(--bg__black);
+    background-color: var(--color__black);
+    color: var(--color__white);
 }
 
 /* font */
@@ -55,6 +60,9 @@ body.windows {
 .mb50 {margin-bottom: 50px !important;}
 .mb60 {margin-bottom: 60px !important;}
 .mb70 {margin-bottom: 70px !important;}
+.mb80 {margin-bottom: 80px !important;}
+.mb90 {margin-bottom: 90px !important;}
+.mb100 {margin-bottom: 100px !important;}
 
 /* border style */
 .bmStyle {
@@ -103,61 +111,24 @@ body.windows {
     border-radius: 5px;
     padding: 0.5em;
 }
-.btnStyle3 {
-    width: 100%;
+.btnStyle3 { /* 기본 버튼 */
+    display: inline-block;
+    font-size: 1rem;
+    text-align: center;
+    width: 90px;
     font-size: 16px;
-    background-color: var(--bg__white);
-    color: var(--color__black);
-    border-radius: 5px;
-    padding: 0.5em;
-}
-.btnStyle4 {
-    width: 100%;
-    font-size: 16px;
-    background-color: var(--bg__black);
+    background-color: var(--color__black);
     color: var(--color__white);
     border-radius: 5px;
     padding: 0.5em;
 }
-.btnStyle5 {
-    width: 10%;
-    font-size: 16px;
-    background-color: var(--bg__gray);
-    color: var(--color__black);
-    padding: 0.2em;
-    border: 1px solid #000;
-}
-.btnStyle6 {
-    width: 6%;
-    font-size: 16px;
-    background-color: var(--bg__gray);
-    color: var(--color__black);
-    padding: 0.2em;
-    border: 1px solid #000;
-}
-.btnStyle7 {
-    width: 3%;
-    font-size: 16px;
-    background-color: var(--bg__gray);
-    color: var(--color__black);
-    padding: 0.2em;
-    border: 1px solid #000;
-}
 
 /* input style */
 .inputStyle {
-    background-color: #f5f5f5;
+    background-color: #fff;
     width: 100%;
     border-radius: 5px;
     padding: 1em 2em;
-    border: 0;
-    font-weight: 300;
-}
-.inputStyle2 {
-    background-color: #f5f5f5;
-    width: 100%;
-    border-radius: 5px;
-    padding: 0.5em;
     border: 0;
     font-weight: 300;
 }
