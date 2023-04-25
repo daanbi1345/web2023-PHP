@@ -121,6 +121,7 @@ body.windows {
     color: var(--color__white);
     border-radius: 5px;
     padding: 0.5em;
+    cursor: pointer;
 }
 
 /* input style */

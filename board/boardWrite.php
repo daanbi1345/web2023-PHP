@@ -24,7 +24,7 @@
     <main id="main" class="container">
         <div class="intro__inner bmStyle center">
             <picture class="intro__images small">
-                <source srcset="../assets/img/intro01.png, ../assets/img/intro01@2x.png 2x, ../joinassets/img/intro01@3x.png 3x" />
+                <source srcset="../assets/img/intro01.png, ../assets/img/intro01@2x.png 2x, ../assets/img/intro01@3x.png 3x" />
                 <img src="../assets/img/intro01.png" alt="소개이미지">
             </picture> 
             <h2>게시글 작성하기</h2>
@@ -45,7 +45,7 @@
                         </div>
                         <div>
                             <label for="boardContents">내용</label>
-                            <textarea name="" id="boardContents" rows="20" class="inputStyle"></textarea>
+                            <textarea name="boardContents" id="boardContents" rows="20" class="inputStyle"></textarea>
                         </div>
                         <button type="submit" class="btnStyle3">저장하기</button>
                     </fieldset>

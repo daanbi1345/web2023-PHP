@@ -8,6 +8,13 @@
     $regTime = time();
     $memberID = $_SESSION['memberID'];
 
+    $boardTitle = $connect -> real_eacape_string($boardTitle);
+    $boardContents = $connect -> real_eacape_string($boardContents);
+
     $sql = "INSERT INTO board(memberID, boardTitle, boardContents, boardView, regTime) VALUES('$memberID', '$boardTitle', '$boardContents', '$boardView', '$regTime')";
     $connect -> query($sql);
 ?>
+
+<script>
+    location.href = "board.php";
+</script>
