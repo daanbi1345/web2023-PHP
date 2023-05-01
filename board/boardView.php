@@ -107,6 +107,10 @@
     } else {
         echo "<tr><td colspan='4'>게시글 ID가 지정되지 않았습니다.</td></tr>";
     }
+
+    // 보드 뷰 + 1
+    $sql = "UPDATE board SET boardView = boardView + 1 WHERE boardID = {$boardID}";
+    $connect -> query($sql);
 ?>
                     </tbody>
                 </table>

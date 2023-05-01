@@ -1,6 +1,13 @@
 <?php
     include "../connect/connect.php";
     include "../connect/session.php";
+
+    
+    $sql = "SELECT count(boardID) FROM board";
+    $result = $connect -> query($sql);
+
+    $boardTotalCount = $result -> fetch_array(MYSQLI_ASSOC);
+    $boardTotalCount = $boardTotalCount['count(boardID)'];
 ?>
 
 <!DOCTYPE html>
@@ -23,8 +30,8 @@
 
     <main id="main" class="container">
 
-        <div class="intro__inner bmStyle">
-            <picture class="intro__images">
+        <div class="intro__inner center bmStyle">
+            <picture class="intro__images small">
                 <source srcset="../assets/img/board01.png, ../assets/img/board01@2x.png 2x, ../assets/img/board01@3x.png 3x" />
                 <img src="../assets/img/board01.png" alt="소개이미지">
             </picture> 
@@ -33,18 +40,19 @@
                 당신은 원하는 것을 상상하고 상상하는 것을 행동에 옮길 것이며, 종국에는 행동에 옮길 것을 창조하게 된다.
             </p>
         </div>
+        <!-- intro inner -->
 
         <div class="board__inner">
             <div class="board__search">
                 <div class="left">
-                    * 총 <em>1111</em>건의 게시물이 등록되어 있습니다.
+                    총 <em><?=$boardTotalCount?></em>건의 게시물이 등록되어 있습니다.
                 </div>
                 <div class="right">
-                    <form action="#" name="#" method="post">
+                    <form action="boardSearch.php" name="boardSearch.php" method="get">
                         <fieldset>
                             <legend class="blind">게시판 검색 영역</legend>
-                            <input type="search" placeholder="검색어를 입력하세요.">
-                            <select name="#" id="#">
+                            <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요." required>
+                            <select name="searchOption" id="searchOption">
                                 <option value="title">제목</option>
                                 <option value="content">내용</option>
                                 <option value="name">등록자</option>
@@ -126,13 +134,6 @@
 <?php
     // 게시글 총 갯수
     // 몇 페이지?
-
-
-    $sql = "SELECT count(boardID) FROM board";
-    $result = $connect -> query($sql);
-
-    $boardTotalCount = $result -> fetch_array(MYSQLI_ASSOC);
-    $boardTotalCount = $boardTotalCount['count(boardID)'];
 
     // 총 페이지 갯수
     $boardTotalCount = ceil($boardTotalCount/$viewNum);
